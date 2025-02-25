@@ -1,6 +1,6 @@
-# compAREdesign_test
-
 # CompAREdesign Package Testing Repository
+
+**⚠️ This repository is under construction. Updates will be made regularly. ⚠️**
 
 This repository contains the validation tests for the **CompAREdesign** R package, specifically for evaluating the functionality and accuracy of the **time-to-event** functions.
 
@@ -40,4 +40,3 @@ For a detailed analysis, refer to the **HTML report** in the `summary/` director
 ---
 
 For any questions or contributions, please open an issue in this repository.
-
