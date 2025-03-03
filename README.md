@@ -6,12 +6,12 @@ This repository contains the validation tests for the **CompAREdesign** R packag
 
 ## Repository Contents
 
-This repository includes the following files:
+This repository includes the following folders:
 
-- **`test_scripts/`**: A directory containing the R scripts used to perform the validation tests.
-- **`results/test_results.RData`**: The raw results from the testing process, stored as an RData file.
-- **`results/test_results.csv`**: A table summarizing the test results in a structured format (CSV file).
-- **`summary/test_summary.html`**: An HTML report with key findings from the testing process, including execution time, error rates, and robustness assessments.
+- **`data`**: The output of the validation tests in Rdata format
+- **`figures`**: The figures resulting for the validation tests.
+- **`scripts`**: A directory containing the R scripts used to perform the validation tests.
+- **`table`**: A table summarizing the test results in a structured format (CSV file).
 
 ## Testing Overview
 
