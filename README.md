@@ -31,23 +31,56 @@ Next, we will provide the graphical outputs of the test. You have the complete r
 
 ## ARE results
 
+Asymptotic Relative Efficiency (ARE) according to probabilities of observing the event.
+
 ![ARE_prob](figures/check_are_prob.png)
+
+ARE according to the cause-specific HRs of the components.
+
 ![ARE_HR](figures/check_are_HR.png)
+
+ARE according to shape parameters of the Weibull distributions for the time to event of the components.
+
 ![ARE_beta](figures/check_are_beta.png)
+
+ARE according to the degree/type/measure of association between components.
+
 ![ARE_rho](figures/check_are_rho.png)
 
 ## Sample size results
 
+Sample size of the composite endpoint (SS_CE) according to probabilities of observing the event.
+
 ![SS_prob](figures/check_ss_prob.png)
+
+SS_CE according to the cause-specific HRs of the components.
+
 ![SS_HR](figures/check_ss_HR.png)
+
+SS_CE according to shape parameters of the Weibull distributions for the time to event of the components.
+
 ![SS_beta](figures/check_ss_beta.png)
+
+SS_CE according to the degree/type/measure of association between components.
+
 ![SS_rho](figures/check_ss_rho.png)
 
 ## Effect size results
 
+Geometric Average Hazard Ratio (gAHR) according to probabilities of observing the event.
+
 ![gAHR_beta](figures/check_gAHR_prob.png)
+
+gAHR according to the cause-specific HRs of the components.
+
 ![gAHR_beta](figures/check_gAHR_HR.png)
+
+gAHR according to shape parameters of the Weibull distributions for the time to event of the components.
+
 ![gAHR_beta](figures/check_gAHR_beta.png)
+
+gAHR according to the degree/type/measure of association between components.
+
 ![gAHR_beta](figures/check_gAHR_rho.png)
 
 
