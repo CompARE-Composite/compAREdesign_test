@@ -11,7 +11,7 @@ load('../data/results_2025-03-03.RData')
 # n <- which(is.na(ARE_RES))[1] - 1
 n <- rev(which(!is.na(ARE_RES)))[1]
 colnames(ARE_RES) <- 'ARE'
-colnames(SS_RES) <- c('ss_e1','ss_e2','ss_ce')
+colnames(SS_RES)  <- c('ss_e1','ss_e2','ss_ce')
 colnames(EFF_RES) <- c('gAHR','AHR','RMSTR','MR')
 colnames(TIM_RES) <- 'minutes_execution'
 
@@ -35,12 +35,13 @@ summary(d$ss_ce)
 summary(d$gAHR)
 
 ##-- Registers to remove (rm)
-sel_rm_are  <- d$ARE==Inf   | is.na(d$ARE) 
-sel_rm_ss   <- d$ss_ce==Inf | is.na(d$ss_ce) 
-sel_rm_gAHR <- d$gAHR==Inf  | is.na(d$gAHR) | d$gAHR>10
+sel_rm_are  <- d$ARE==Inf   | is.na(d$ARE)               # NA or Inf in ARE
+sel_rm_ss   <- d$ss_ce==Inf | is.na(d$ss_ce)             # NA or Inf in Sample size
+sel_rm_gAHR <- d$gAHR==Inf  | is.na(d$gAHR) | d$gAHR>10  # NA or Inf or >10 in gAHR
 
-sel_rm <- sel_rm_are | sel_rm_ss | sel_rm_gAHR
+sel_rm <- sel_rm_are | sel_rm_ss | sel_rm_gAHR           # Selected registers to remove
 
+##-- Descriptive analysis of the unstable results
 t_ARE  <- table(sel_rm)
 t_ss   <- table(sel_rm_ss)
 t_gAHR <- table(sel_rm_gAHR)
@@ -51,8 +52,9 @@ prop_t_ss   <- prop.table(t_ss)
 prop_t_gAHR <- prop.table(t_gAHR)
 prop_t_rm   <- prop.table(t_rm)
 
-
 d[sel_rm,]
+
+##-- Clean dataset
 d_com <- d[-which(sel_rm),]
 
 ##-- Summary
@@ -61,13 +63,13 @@ summary(d_com$ss_ce)
 summary(d_com$gAHR)
 
 ##-- Labels
-d_com$P0_E2_lab <- paste0('p0_e2 = ',d_com$P0_E2)
-d_com$HR_E2_lab <- paste0('HR_e2 = ',d_com$HR_E2)
-d_com$BETA_E2_lab <- paste0('beta_e2 = ',d_com$BETA_E2)
-d_com$COPULA_LAB <- factor(paste0('copula = ',d_com$COPULA), 
-                           levels=c('copula = Frank', 'copula = Gumbel', 'copula = Clayton'))
+d_com$P0_E2_lab    <- paste0('p0_e2 = ',d_com$P0_E2)
+d_com$HR_E2_lab    <- paste0('HR_e2 = ',d_com$HR_E2)
+d_com$BETA_E2_lab  <- paste0('beta_e2 = ',d_com$BETA_E2)
+d_com$COPULA_LAB   <- factor(paste0('copula = ',d_com$COPULA), 
+                             levels = c('copula = Frank', 'copula = Gumbel', 'copula = Clayton'))
 d_com$RHO_TYPE_LAB <- factor(paste0('rho_type = ',d_com$RHO_TYPE),
-                             levels= c('rho_type = Spearman','rho_type = Kendall'))
+                             levels = c('rho_type = Spearman','rho_type = Kendall'))
 
 
 #-------------------------------------------------------------------------------

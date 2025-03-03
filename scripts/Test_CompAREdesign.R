@@ -65,7 +65,7 @@ TIM_RES <- matrix(ncol=1, nrow=n_dd)
 
 set.seed(12345)
 t0 <- Sys.time()
-for(i in 34919:n_dd){
+for(i in 1:n_dd){
   t00 <- Sys.time()
   ##-- Parameters
   p0_e1         = dd$P0_E1[i]
@@ -143,4 +143,4 @@ for(i in 34919:n_dd){
   if(i%%1000==0) save.image(paste0(path,"results_",as.character(Sys.Date()),".RData"))
 }
 
-save.image(paste0(path,"results_",as.character(Sys.Date()),".RData"))
+save.image(paste0(path,"validation_results.RData"))
