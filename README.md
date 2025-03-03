@@ -22,8 +22,8 @@ The validation tests cover **72,576 different scenarios**, systematically evalua
 ## Key Findings
 
 - Minor precision corrections were required to address numerical errors caused by values **close to zero** in certain denominators.
-- The functions proved **robust**, with only **0.06%** of cases yielding unstable results.
-- The total execution time for all scenarios was **50.26 hours**.
+- The functions proved **robust**, with only **0.1%** of cases yielding unstable results.
+- The total execution time for all scenarios was **52.67 hours**.
 
 Next, we will provide the graphical outputs of the test. The complete results are in `table/validation_results.csv`
 
