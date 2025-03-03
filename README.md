@@ -31,7 +31,24 @@ Next, we will provide the graphical outputs of the test. You have the complete r
 
 ## ARE results
 
-![ARE_1](figures/check_are_beta.png)
+![ARE_prob](figures/check_are_prob.png)
+![ARE_HR](figures/check_are_HR.png)
+![ARE_beta](figures/check_are_beta.png)
+![ARE_rho](figures/check_are_rho.png)
+
+## Sample size results
+
+![SS_prob](figures/check_ss_prob.png)
+![SS_HR](figures/check_ss_HR.png)
+![SS_beta](figures/check_ss_beta.png)
+![SS_rho](figures/check_ss_rho.png)
+
+## Effect size results
+
+![gAHR_beta](figures/check_gAHR_prob.png)
+![gAHR_beta](figures/check_gAHR_HR.png)
+![gAHR_beta](figures/check_gAHR_beta.png)
+![gAHR_beta](figures/check_gAHR_rho.png)
 
 
 ## Usage Instructions
