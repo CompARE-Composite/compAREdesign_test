@@ -31,7 +31,7 @@ Next, we will provide the graphical outputs of the test. You have the complete r
 
 ## ARE results
 
-![figures/check_are_beta.png]
+![ARE_1](figures/check_are_beta.png)
 
 
 ## Usage Instructions
