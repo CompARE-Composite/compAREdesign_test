@@ -24,19 +24,18 @@ The validation tests cover **72,576 different scenarios**, systematically evalua
 ## Key Findings
 
 - Minor precision corrections were required to address numerical errors caused by values **close to zero** in certain denominators.
-- The functions proved **robust**, with only **[XX%]** of cases yielding unstable results.
-- The total execution time for all scenarios was **XX hours**.
+- The functions proved **robust**, with only **0.06%** of cases yielding unstable results.
+- The total execution time for all scenarios was **47.26 hours**.
+
+Next, we will provide the graphical outputs of the test. You have the complete results in `table/validation_results.csv`
+
+## ARE results
+
+![figures/check_are_beta.png]
+
 
 ## Usage Instructions
 
-To reproduce the tests, clone this repository and run the scripts in the `test_scripts/` directory. Example:
+To reproduce the tests, clone this repository and run the scripts in the `scripts/` directory. 
 
-```r
-source("test_scripts/run_tests.R")
-```
 
-For a detailed analysis, refer to the **HTML report** in the `summary/` directory.
-
----
-
-For any questions or contributions, please open an issue in this repository.
