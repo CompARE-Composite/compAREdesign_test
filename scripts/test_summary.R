@@ -44,10 +44,12 @@ sel_rm <- sel_rm_are | sel_rm_ss | sel_rm_gAHR
 t_ARE  <- table(sel_rm)
 t_ss   <- table(sel_rm_ss)
 t_gAHR <- table(sel_rm_gAHR)
+t_rm   <- table(sel_rm)
 
 prop_t_ARE  <- prop.table(t_ARE)
 prop_t_ss   <- prop.table(t_ss)
 prop_t_gAHR <- prop.table(t_gAHR)
+prop_t_rm   <- prop.table(t_rm)
 
 
 d[sel_rm,]
@@ -181,6 +183,13 @@ ggplot(d_com, aes(x=as.factor(RHO), y=gAHR)) +
   scale_y_log10()
 ggsave(filename = '../figures/check_gAHR_rho.png', width = 6, height = 4)
 
-save.image("data/test_summary_results.RData")
+#-------------------------------------------------------------------------------
+# Computation Time
+#-------------------------------------------------------------------------------
+summary(d_com$minutes_execution)
+sum(d_com$minutes_execution)/60
+
+
+save.image("../data/test_summary_results.RData")
 
 
