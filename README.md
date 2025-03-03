@@ -1,8 +1,6 @@
 # CompAREdesign Package Testing Repository
 
-**⚠️ This repository is under construction. Updates will be made regularly. ⚠️**
-
-This repository contains the validation tests for the **CompAREdesign** R package, specifically for evaluating the functionality and accuracy of the **time-to-event** functions.
+This repository contains the validation tests for the [**CompAREdesign**](https://CRAN.R-project.org/package=CompAREdesign) R package, specifically for evaluating the functionality and accuracy of the **time-to-event** functions.
 
 ## Repository Contents
 
