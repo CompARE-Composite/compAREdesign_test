@@ -5,22 +5,15 @@ rm(list=ls())
 library(ggplot2)
 
 ##-- Load data
-load('../data/results_2025-03-03.RData')
+load('../data/validation_results.RData')
 
 ##-- Cbind data
-# n <- which(is.na(ARE_RES))[1] - 1
-n <- rev(which(!is.na(ARE_RES)))[1]
 colnames(ARE_RES) <- 'ARE'
 colnames(SS_RES)  <- c('ss_e1','ss_e2','ss_ce')
 colnames(EFF_RES) <- c('gAHR','AHR','RMSTR','MR')
 colnames(TIM_RES) <- 'minutes_execution'
 
-dim(dd)
-dim(ARE_RES)
-dim(SS_RES)
-dim(EFF_RES)
-dim(TIM_RES)
-d <- as.data.frame(cbind(dd[1:n,],ARE_RES[1:n,],SS_RES[1:n,],EFF_RES[1:n,],TIM_RES[1:n,]))
+d <- as.data.frame(cbind(dd,ARE_RES,SS_RES,EFF_RES,TIM_RES))
 colnames(d)[15] <- 'ARE'
 colnames(d)[23] <- 'minutes_execution'
 for(i in 1:length(d)) if(class(d[,i])=='character') d[,i] <- as.factor(d[,i])
