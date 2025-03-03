@@ -31,17 +31,27 @@ Next, we will provide the graphical outputs of the test. The complete results ar
 
 Asymptotic Relative Efficiency (ARE) according to probabilities of observing the event.
 
+- As $p0_e1$ increases the ARE decreases. This is logical because the more prevalent the first endpoint is, the less is the need of the second component.
+- The ARE takes greater values when the value of the $p0_e2$ is high.
+
 ![ARE_prob](figures/check_are_prob.png)
 
 ARE according to the cause-specific HRs of the components.
+
+- ARE is almost always greater than 1 when $HR_e2<HR_e1$
+- ARE is usually greater than 1 when $HR_e2=HR_e1$
 
 ![ARE_HR](figures/check_are_HR.png)
 
 ARE according to shape parameters of the Weibull distributions for the time to event of the components.
 
+- Shape parameters of the weibull distribution for the time to event for the components have less impact than other input parameters in the ARE.
+
 ![ARE_beta](figures/check_are_beta.png)
 
 ARE according to the degree/type/measure of association between components.
+
+- Association structures have less impact than other input parameters in the ARE.
 
 ![ARE_rho](figures/check_are_rho.png)
 
